@@ -7,6 +7,7 @@ function App() {
                     <TodoListCard />
                 </Col>
             </Row>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
         </Container>
     );
 }
