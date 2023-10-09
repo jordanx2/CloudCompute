@@ -1,5 +1,10 @@
 function App() {
     const { Container, Row, Col } = ReactBootstrap;
+
+    const toggleDarkMode = () => {
+        document.body.classList.toggle('dark-mode');
+    };
+
     return (
         <Container>
             <Row>
@@ -8,12 +13,12 @@ function App() {
                 </Col>
             </Row>
             <Row>
-                <button id="dark-mode-toggle">Toggle Dark Mode</button>
+                <button id="dark-mode-toggle" onClick={toggleDarkMode}>Toggle Dark Mode</button>
             </Row>
-
         </Container>
     );
 }
+
 
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
@@ -179,13 +184,6 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
         </Container>
     );
 }   
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-    });
-
-    ReactDOM.render(<App />, document.getElementById('root'));
-});
 
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
