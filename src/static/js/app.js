@@ -7,7 +7,10 @@ function App() {
                     <TodoListCard />
                 </Col>
             </Row>
-            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            <Row>
+                <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            </Row>
+
         </Container>
     );
 }
@@ -175,10 +178,13 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
             </Row>
         </Container>
     );
-}
+}   
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
 
-document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
+    ReactDOM.render(<App />, document.getElementById('root'));
 });
 
 
