@@ -1,8 +1,10 @@
 function App() {
     const { Container, Row, Col } = ReactBootstrap;
+    const [isDarkMode, setIsDarkMode] = React.useState(false);
 
     const toggleDarkMode = () => {
         document.body.classList.toggle('dark-mode');
+        setIsDarkMode(!isDarkMode); // Toggle the dark mode state
     };
 
     return (
@@ -12,13 +14,16 @@ function App() {
                     <TodoListCard />
                 </Col>
             </Row>
-            
-            <Row className="justify-content-center"> {/* Aligns the Row content to center */}
-                <button id="dark-mode-toggle" onClick={toggleDarkMode}>Toggle Dark Mode</button>
+
+            <Row className="justify-content-center">
+                <button id="dark-mode-toggle" onClick={toggleDarkMode}>
+                    {isDarkMode ? 'Activate Light Mode' : 'Activate Dark Mode'}
+                </button>
             </Row>
         </Container>
     );
 }
+
 
 
 function TodoListCard() {
