@@ -176,4 +176,9 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     );
 }
 
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
+
 ReactDOM.render(<App />, document.getElementById('root'));

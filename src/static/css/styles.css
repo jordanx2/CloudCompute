@@ -37,3 +37,16 @@ body {
 button:focus {
     border: 1px solid #333;
 }
+
+body.dark-mode {
+    background-color: #121212; /* Dark Background Color */
+    color: #ffffff; /* Light Text Color */
+}
+
+.dark-mode .item {
+    background-color: #333333; /* Darker Item Background Color */
+    color: #ffffff; /* Light Item Text Color */
+    /* Add more styles for dark mode if needed */
+}
+
+/* Add more styles for dark mode if needed */
