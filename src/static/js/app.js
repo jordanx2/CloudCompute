@@ -12,7 +12,8 @@ function App() {
                     <TodoListCard />
                 </Col>
             </Row>
-            <Row>
+            
+            <Row className="justify-content-center"> {/* Aligns the Row content to center */}
                 <button id="dark-mode-toggle" onClick={toggleDarkMode}>Toggle Dark Mode</button>
             </Row>
         </Container>
